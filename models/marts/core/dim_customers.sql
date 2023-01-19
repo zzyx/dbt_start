@@ -11,6 +11,10 @@ orders as (
 
 ),
 
+payments_orders as ( 
+    select * from {{ ref('stg_payments_orders') }}
+
+),
 customer_orders as (
 
     select
@@ -21,6 +25,7 @@ customer_orders as (
         count(order_id) as number_of_orders
 
     from orders
+    left join payments_orders using(customer_id)
 
     group by 1
 
