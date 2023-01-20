@@ -5,7 +5,7 @@ with payments as (
         ORDERID as order_id,
         PAYMENTMETHOD as payment_method,
         status,
-        amount,
+        amount / 100 as amount,
         created as created_at
 
     from stripe.payment
