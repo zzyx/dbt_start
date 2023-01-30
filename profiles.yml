@@ -1,0 +1,13 @@
+jaffle_shop:
+  outputs:
+    dev:
+      type: redshift
+      threads: 1
+      host: dbtredshiftcluster-npiunjbelh9o.ckdnpv8xp5bk.us-east-1.redshift.amazonaws.com
+      port: 5439
+      user: dbtadmin
+      pass: "Dbtadmin108!"
+      dbname: dbtworkshop
+      schema: dbt_ma
+
+  target: dev
