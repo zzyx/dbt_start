@@ -16,7 +16,7 @@ sources:
               - not_null
             
       - name: orders
-       description: raw orders data
+        description: raw orders data
         columns:
           - name: id
             description: the primary key of the raw orders data
